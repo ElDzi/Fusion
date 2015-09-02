@@ -8,6 +8,7 @@ public class School {
 	private String fullAddress;
 	private ArrayList<User> teachers = new ArrayList<>();
 	private ArrayList<User> pupils = new ArrayList<>();
+	private ArrayList<Class> classes = new ArrayList<>();
 
 	public School() {
 		name = "Zespó³ Szkó³ Ponadgimnazjalnych nr 2. Rolnicze Centrum Kszta³cenia Ustawicznego i Praktycznego w £owiczu";

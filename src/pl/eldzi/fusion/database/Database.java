@@ -1,8 +1,19 @@
 package pl.eldzi.fusion.database;
 
-public class Database {
-public static String getUserNameByID(long ID){
-	return "TEST_USER";
-	//TODO
-}
+public interface Database {
+	
+	
+	public void connect();
+	
+	
+	public void close();
+	
+	
+	public void executeQuery();
+	
+	
+	public void createTable();
+	
+	
+	
 }

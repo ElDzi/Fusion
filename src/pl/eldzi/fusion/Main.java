@@ -10,7 +10,7 @@ public class Main {
 	 * Dziennik elektroniczny to coœ, czego boj¹ siê gimbusy.
 	 * Jednak w szkole œredniej sie przydajê.
 	 * Nie ka¿da szko³a w niego inwestuje.
-	 * Dlatego tak, narodzi³ siê pomys³ na wewn¹trzszkolny dziennik
+	 * Dlatego tak, narodzi³ siê pomys³ na wewn¹trz-szkolny dziennik
 	 * elektroniczny.
 	 */
 	public static void main(String[] args) {

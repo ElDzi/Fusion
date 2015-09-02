@@ -2,5 +2,5 @@
 package pl.eldzi.fusion.base.enums;
 
 public enum UserType {
-	ADMIN, TEACHER, PUPIL;
+	ADMIN, DIRECTOR, TEACHER, PUPIL, PARENTS, TUTOR;
 }
