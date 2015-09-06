@@ -1,11 +1,14 @@
 
 package pl.eldzi.fusion.manager;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import pl.eldzi.fusion.base.Class;
 import pl.eldzi.fusion.base.Pupil;
 import pl.eldzi.fusion.base.Teacher;
+import pl.eldzi.fusion.base.enums.UserType;
 
 public class UserManager {
 	private static ArrayList<Class> classes = new ArrayList<>();
@@ -20,17 +23,44 @@ public class UserManager {
 			if (!classes.contains(claz) | !containByName(claz)) {
 				classes.add(claz);
 				// TODO: COLORED LOGGER!
+				// TODO: INSERT MYSQL!
 				System.out.println("Klasa " + claz.getName()
 				        + " zostala pomyslnie zarejestrowana !");
 			}
 		}
 	}
 
-	protected static boolean containByName(Class claz) {
-		if (classes.isEmpty()) {
+	public static void registerTeacher(Teacher t) {
+		if (t != null && t.getUserType().equals(UserType.TEACHER)) {
+			if (!teachers.contains(t) || !containByName(t)) {
+				teachers.add(t);
+			}
+		}
+	}
+
+	protected static boolean containByName(Teacher t) {
+		if (t == null) {
 			return false;
 		}
 
+		if (teachers.isEmpty()) {
+			return false;
+		}
+		for (Teacher ti : teachers) {
+			if (ti.getName().toLowerCase().equals(t.getName().toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	protected static boolean containByName(Class claz) {
+		if (claz == null) {
+			return false;
+		}
+		if (classes.isEmpty()) {
+			return false;
+		}
 		for (Class cl : classes) {
 			if (cl.getName().toLowerCase().equals(claz.getName().toLowerCase())) {
 				return true;

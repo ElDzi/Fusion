@@ -9,11 +9,12 @@ public class Class {
 	private ArrayList<Pupil> pupils;
 	private String name;
 
-	public Class(long ID) {
-
-	}
-
-	public Class(String name) {
+	public Class(String name, Teacher t, Pupil... pupils) {
+		this.name = name;
+		tutor = t;
+		for (Pupil p : pupils) {
+			this.pupils.add(p);
+		}
 	}
 
 	public ArrayList<Pupil> getPupils() {

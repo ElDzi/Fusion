@@ -1,8 +1,14 @@
+
 package pl.eldzi.fusion.base;
 
-public class Parents  extends User{
+import pl.eldzi.fusion.base.enums.UserType;
 
-	public Parents(long ID) {
-	    super(ID);
-    }
+public class Parents extends User {
+	private Pupil pupil;
+
+	public Parents(String userName, String name, String surName, UserType type) {
+		super(userName, name, surName, type);
+		pupil = null; // TODO
+	}
+
 }

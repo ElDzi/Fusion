@@ -1,10 +1,24 @@
 
 package pl.eldzi.fusion.base;
 
-public class Teacher extends User {
+import pl.eldzi.fusion.base.enums.UserType;
 
-	public Teacher(long ID) {
-	    super(ID);
-    }
+public class Teacher extends User {
+	private Subject[] subjects;
+	private Class claz;
+
+	public Teacher(String userName, String name, String surName, UserType type,
+	        Class clas, Subject... subj) {
+		super(userName, name, surName, type);
+		claz = clas;
+		subjects = subj;
+		if (!getUserType().equals(UserType.TEACHER)) {
+
+		}
+	}
+
+	public Subject[] getSubjects() {
+		return subjects;
+	}
 
 }

@@ -1,9 +1,13 @@
+
 package pl.eldzi.fusion.base;
 
-public class Pupil  extends User{
+import pl.eldzi.fusion.base.enums.UserType;
 
-	public Pupil(long ID) {
-	    super(ID);
-    }
+public class Pupil extends User {
+
+	public Pupil(String userName, String name, String surName, UserType type) {
+		super(userName, name, surName, type);
+		//ADD PARENTS
+	}
 
 }

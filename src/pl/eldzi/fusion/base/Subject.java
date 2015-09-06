@@ -1,7 +1,6 @@
 
 package pl.eldzi.fusion.base;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Subject {
@@ -10,7 +9,7 @@ public class Subject {
 	private Teacher t;
 
 	@SuppressWarnings("deprecation")
-    public Subject(String subjectName, Date startLessonDate, Teacher teacher) {
+	public Subject(String subjectName, Date startLessonDate, Teacher teacher) {
 		name = subjectName;
 		s = startLessonDate;
 		e = new Date(s.getYear(), s.getMonth(), s.getDate(), s.getHours(),
@@ -24,6 +23,14 @@ public class Subject {
 
 	public Date getEndDate() {
 		return e;
+	}
+
+	public Teacher getTeacher() {
+		return t;
+	}
+
+	public String getSubjectName() {
+		return name;
 	}
 
 }
