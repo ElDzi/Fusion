@@ -38,7 +38,7 @@ public class UserManager {
 		}
 	}
 
-	protected static boolean containByName(Teacher t) {
+	public static boolean containByName(Teacher t) {
 		if (t == null) {
 			return false;
 		}
@@ -54,7 +54,7 @@ public class UserManager {
 		return false;
 	}
 
-	protected static boolean containByName(Class claz) {
+	public static boolean containByName(Class claz) {
 		if (claz == null) {
 			return false;
 		}
